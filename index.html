@@ -1,55 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Welcome to Innovatech, where innovation meets technology. Explore cutting-edge solutions for your business needs.">
-  <title>Innovatech - Redefining Tech Solutions</title>
-  <link rel="stylesheet" href="index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Topic Listing</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Innovatech</h1>
-    <p>Redefining Technology for the Future</p>
-  </header>
 
-  <nav>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#features">Features</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+    <!-- FAQs -->
+    <section class="faqs container">
+        <div class="row justify-content-center">
+            <div class="col-md-8 text-center">
+                <h2 class="faq-title">Frequently Asked Questions</h2>
+                <div class="faq-img">
+                    <img src="images/questions.avif" alt="Illustration">
+                </div>
+            </div>
+        </div>
+    
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="faq-content">
+                    <div class="faq">
+                        <button class="toggle-faq">What is Topic Listing? <span class="icon">+</span></button>
+                        <p class="faq-answer">Topic Listing is a free Bootstrap 5 CSS template. <b>You are not allowed to 
+                            redistribute this template</b> on any other template collection website 
+                            without permission. Please contact TemplateMo for more detail.
+                            Thank you.
+                    </p>
+                    </div>
+                    <div class="faq">
+                        <button class="toggle-faq">How to find a topic? <span class="icon">+</span></button>
+                        <p class="faq-answer">You can search using the search bar at the top.</p>
+                    </div>
+                    <div class="faq">
+                        <button class="toggle-faq">Does it need to be paid? <span class="icon">+</span></button>
+                        <p class="faq-answer">No, it is completely free to use.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <section class="hero">
-    <div>
-      <h2>Innovate. Evolve. Thrive.</h2>
-      <p>Your Partner in Cutting-Edge Technology Solutions</p>
-      <div class="cta">
-        <a href="#contact">Get Started</a>
-      </div>
-    </div>
-  </section>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const toggles = document.querySelectorAll(".toggle-faq");
+    
+            toggles.forEach((toggle) => {
+                toggle.addEventListener("click", function () {
+                    const answer = this.nextElementSibling;
+                    answer.classList.toggle("active");
+    
+                    // Change the "+" to "-" when expanded
+                    const icon = this.querySelector(".icon");
+                    if (answer.classList.contains("active")) {
+                        icon.textContent = "−";
+                    } else {
+                        icon.textContent = "+";
+                    }
+                });
+            });
+        });
+    </script>
+    
 
-  <section id="features" class="features">
-    <div class="feature">
-      <h3>AI-Powered Tools</h3>
-      <p>Leverage artificial intelligence to streamline your business processes.</p>
-    </div>
-    <div class="feature">
-      <h3>Cloud Integration</h3>
-      <p>Secure, scalable, and reliable cloud solutions for modern businesses.</p>
-    </div>
-    <div class="feature">
-      <h3>Custom Development</h3>
-      <p>Tailored software solutions to meet your unique needs.</p>
-    </div>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Innovatech. All rights reserved.</p>
-  </footer>
-
-  <script src="index.js"></script>
 </body>
 </html>
